@@ -13,23 +13,25 @@ import {
 import { db, storage } from "../firebase";
 import { v4 as uuid } from "uuid";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
+import {encryptData} from "../encryption.js"
 
-const Input = () => {
-  const [text, setText] = useState("");
-  const [img, setImg] = useState(null);
+var Input = () => {
+  var [text, setText] = useState("");
+  var [img, setImg] = useState(null);
 
-  const { currentUser } = useContext(AuthContext);
-  const { data } = useContext(ChatContext);
+  var { currentUser } = useContext(AuthContext);
+  var { data } = useContext(ChatContext);
 
-  const handleSend = async () => {
+  var handleSend = async () => {
+    text = encryptData(text)
     if (img) {
-      const storageRef = ref(storage, uuid());
+      var storageRef = ref(storage, uuid());
 
-      const uploadTask = uploadBytesResumable(storageRef, img);
+      var uploadTask = uploadBytesResumable(storageRef, img);
 
       uploadTask.on(
         (error) => {
-          //TODO:Handle Error
+          //TODO: Handle Error
         },
         () => {
           getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
@@ -72,6 +74,7 @@ const Input = () => {
 
     setText("");
     setImg(null);
+    console.log(text)
   };
   return (
     <div className="input">
