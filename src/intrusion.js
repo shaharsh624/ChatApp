@@ -1,8 +1,8 @@
 // let inputString = "1'; DROP TABLE users; --";
-let inputString = "DROP sampletable;-- ";
+// let inputString = "DROP sampletable;-- ";
 
-console.log("Testing SQL Injection detection with input string: " + inputString);
-console.log("Result: " + (intrusionDetectionSystem(inputString) ? "Safe" : "Unsafe"));
+// console.log("Testing SQL Injection detection with input string: " + inputString);
+// console.log("Result: " + (intrusionDetectionSystem(inputString) ? "Safe" : "Unsafe"));
 
 function detectSqlInjection(inputString) {
     let sqlInjectionPattern = /(%27)|(')|(--)|(%23)|(#)/i;
@@ -13,9 +13,10 @@ function detectSqlInjection(inputString) {
 // This function takes a user input and checks it for SQL injection attacks using the detectSqlInjection() function.
 function intrusionDetectionSystem(userInput) {
     if (detectSqlInjection(userInput)) {
-        console.log("Potential SQL Injection detected!");
         return false;
     }
     
     return true;
 }
+
+export {intrusionDetectionSystem}
