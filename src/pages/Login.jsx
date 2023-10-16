@@ -35,7 +35,7 @@ const Login = () => {
         <span className="title">Login</span>
         <form onSubmit={handleSubmit}>
           <input type="text" placeholder="email" />
-          <input type="text" placeholder="password" />
+          <input type="password" placeholder="password" />
           <button>Sign in</button>
           {detectIntrusion && <span>Intrusion detected</span>}
           {err && <span>Something went wrong</span>}
