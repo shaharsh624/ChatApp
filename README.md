@@ -35,7 +35,7 @@ Configure Firebase Authentication and Realtime Database rules as needed.
 
 
    ```bash
-   git clone https://github.com/yourusername/ChatApp.git
+   git clone https://github.com/shaharsh624/ChatApp
    ```
    ```bash
    cd ChatApp
