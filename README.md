@@ -19,7 +19,7 @@ ChatApp is a secure real-time messaging application that offers end-to-end encry
 
 ## Tech Stacks
 
-- **Frontend**: Built with ViteJS, a modern and fast JavaScript build tool.
+- **Frontend**: Built with ReactJS, a modern and fast JavaScript build tool.
 
 - **Backend**: Firebase is used for user authentication, real-time database, and cloud functions.
 
