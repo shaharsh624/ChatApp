@@ -17,7 +17,7 @@ ChatApp is a secure real-time messaging application that offers end-to-end encry
 
 - **User-Friendly Interface**: ChatApp is designed with a clean and intuitive user interface for an exceptional user experience.
 
-## Tech Stack
+## Tech Stacks
 
 - **Frontend**: Built with ViteJS, a modern and fast JavaScript build tool.
 
